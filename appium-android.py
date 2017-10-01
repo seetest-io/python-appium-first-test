@@ -15,7 +15,7 @@ class AndroidTest(unittest.TestCase):
         self.dc['platformName'] = 'Android'
         self.dc['app'] = 'cloud:<BUNDLE_ID>'
         self.dc['appPackage'] = '<BUNDLE_ID>'
-        self.dc['appActivity'] = '.<ACTIVITY>'
+        self.dc['appActivity'] = '<ACTIVITY>'
         self.driver = webdriver.Remote('https://cloud.experitest.com:443/wd/hub', self.dc)
 
     def testYourAndroidApp(self):
