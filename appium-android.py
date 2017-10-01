@@ -4,7 +4,7 @@ from appium import webdriver
 
 
 class AndroidTest(unittest.TestCase):
-    projectName = "<PROJECT_NAME>"
+    projectName = "<PROEJCT_NAME>"
     accessKey = "<ACCESS_KEY>"
     dc = {}
     driver = None
@@ -12,8 +12,7 @@ class AndroidTest(unittest.TestCase):
     def setUp(self):
         self.dc['accessKey'] = self.accessKey
         self.dc['projectName'] = ''
-        self.dc['deviceQuery'] = '@os="android"'
-        self.dc['platformName'] = 'android'
+        self.dc['platformName'] = 'Android'
         self.dc['app'] = 'cloud:<BUNDLE_ID>'
         self.dc['appPackage'] = '<BUNDLE_ID>'
         self.dc['appActivity'] = '.<ACTIVITY>'

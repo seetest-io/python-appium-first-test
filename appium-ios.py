@@ -4,16 +4,15 @@ from appium import webdriver
 
 
 class Untitled(unittest.TestCase):
-    projectName = "<PROJECT_NAME>"
+    projectName = "<PROEJCT_NAME>"
     accessKey = "<ACCESS_KEY>"
     dc = {}
     driver = None
 
     def setUp(self):
         self.dc['accessKey'] = self.accessKey
-        self.dc['projectName'] = ''
-        self.dc['deviceQuery'] = '@os="ios"'
         self.dc['projectName'] = self.projectName
+        self.dc['platformName'] = 'iOS'
         self.dc['app'] = 'cloud:<BUNDLE_ID>'
         self.dc['bundleId'] = '<BUNDLE_ID>'
         self.dc['platformName'] = 'ios'
