@@ -15,7 +15,6 @@ class Untitled(unittest.TestCase):
         self.dc['platformName'] = 'iOS'
         self.dc['app'] = 'cloud:<BUNDLE_ID>'
         self.dc['bundleId'] = '<BUNDLE_ID>'
-        self.dc['platformName'] = 'ios'
         self.driver = webdriver.Remote('https://cloud.experitest.com:443/wd/hub', self.dc)
 
     def testUntitled(self):
