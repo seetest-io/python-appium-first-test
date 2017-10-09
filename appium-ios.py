@@ -4,7 +4,7 @@ import os
 
 class IosAppTest(unittest.TestCase):
     test_name = "iOS App Test with Python"
-    accessKey = os.environ["accessKey"]
+    accessKey = os.environ["ACCESS_KEY"]
     dc = {}
     driver = None
 
