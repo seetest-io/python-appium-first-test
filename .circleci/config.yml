@@ -44,7 +44,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            python appium-ios.py test
+            python appium-ios.py
             python -m unittest appium-android.AndroidAppTest
 
       - store_artifacts:
