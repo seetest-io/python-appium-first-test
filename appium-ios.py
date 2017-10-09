@@ -1,5 +1,4 @@
 import unittest
-import time
 from appium import webdriver
 import os
 
