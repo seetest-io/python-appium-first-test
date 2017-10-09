@@ -20,13 +20,6 @@ jobs:
     steps:
       - checkout
 
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "requirements.txt" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
       - run:
           name: install dependencies
           command: |
@@ -34,17 +27,13 @@ jobs:
             . venv/bin/activate
             pip install Appium-Python-Client
 
-      - save_cache:
-          paths:
-            - ./venv
-          key: v1-dependencies-{{ checksum "requirements.txt" }}
 
       # run tests!
       - run:
           name: run tests
           command: |
-              - python -m unittest appium-android.AndroidAppTest
-              - python -m unittest appium-ios.IosAppTest
+            - python -m unittest appium-android.AndroidAppTest
+            - python -m unittest appium-ios.IosAppTest
 
       - store_artifacts:
           path: test-reports
