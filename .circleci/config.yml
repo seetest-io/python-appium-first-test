@@ -44,7 +44,8 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            python manage.py test
+            python appium-android.py test
+            python appium-ios.py test
 
       - store_artifacts:
           path: test-reports
