@@ -3,7 +3,7 @@ from appium import webdriver
 import os
 
 class IosAppTest(unittest.TestCase):
-    test_name = "iOS App Test"
+    test_name = "iOS App Test with Python"
     accessKey = os.environ["accessKey"]
     dc = {}
     driver = None

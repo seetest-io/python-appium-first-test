@@ -5,7 +5,7 @@ import os
 
 
 class AndroidAppTest(unittest.TestCase):
-    test_name = "Android App Test"
+    test_name = "Android App Test with Python"
     accessKey = os.environ['accessKey']
     dc = {}
     driver = None
