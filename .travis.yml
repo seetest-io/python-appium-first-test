@@ -1,0 +1,8 @@
+language: python
+
+install:
+  - pip install Appium-Python-Client
+
+script:
+  - python -m unittest appium-android.AndroidAppTest
+  - python -m unittest appium-ios.IosAppTest

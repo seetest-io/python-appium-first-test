@@ -1,21 +1,22 @@
 import unittest
 import time
 from appium import webdriver
+import os
 
 
-class AndroidTest(unittest.TestCase):
-    projectName = "<PROEJCT_NAME>"
-    accessKey = "<ACCESS_KEY>"
+class AndroidAppTest(unittest.TestCase):
+    test_name = "Android App Test"
+    accessKey = os.environ['accessKey']
     dc = {}
     driver = None
 
     def setUp(self):
+        self.dc['testName'] = self.test_name
         self.dc['accessKey'] = self.accessKey
-        self.dc['projectName'] = ''
         self.dc['platformName'] = 'Android'
-        self.dc['app'] = 'cloud:<BUNDLE_ID>'
-        self.dc['appPackage'] = '<BUNDLE_ID>'
-        self.dc['appActivity'] = '<ACTIVITY>'
+        self.dc['app'] = 'cloud:com.experitest.ExperiBank/.LoginActivity'
+        self.dc['appPackage'] = 'com.experitest.ExperiBank'
+        self.dc['appActivity'] = '.LoginActivity'
         self.driver = webdriver.Remote('https://cloud.experitest.com:443/wd/hub', self.dc)
 
     def testYourAndroidApp(self):
