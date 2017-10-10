@@ -1,0 +1,11 @@
+image: python:3.5.1
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - pip
+        script: # Modify the commands below to build your repository.
+          - pip install Appium-Python-Client
+          - bash python -m unittest appium-android.AndroidAppTest
+          - bash python -m unittest appium-ios.IosAppTest
