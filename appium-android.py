@@ -30,7 +30,7 @@ class AndroidAppTest(unittest.TestCase):
         self.driver.find_element_by_xpath("xpath=//*[@id='amountTextField']").send_keys('10')
         self.driver.find_element_by_xpath("xpath=//*[@id='countryTextField']").send_keys('US')
         self.driver.find_element_by_xpath("xpath=//*[@text='Send Payment']").click()
-        self.driver.find_element_by_xpath("xpath=//*[@text='Yes']").click()
+        self.driver.find_element_by_xpath("xpath=//*[@id='button1']").click()
 
     def tearDown(self):
         self.driver.quit()
