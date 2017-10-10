@@ -20,7 +20,17 @@ class AndroidAppTest(unittest.TestCase):
         self.driver = webdriver.Remote('https://cloud.experitest.com:443/wd/hub', self.dc)
 
     def testYourAndroidApp(self):
-        time.sleep(0)
+        self.driver.press_keycode(82)
+        self.driver.find_element_by_xpath("xpath=//*[@id='usernameTextField']").send_keys('company')
+        self.driver.find_element_by_xpath("xpath=//*[@id='passwordTextField']").send_keys('company')
+        self.driver.find_element_by_xpath("xpath=//*[@id='loginButton']").click()
+        self.driver.find_element_by_xpath("xpath=//*[@text='Make Payment']").click()
+        self.driver.find_element_by_xpath("xpath=//*[@id='phoneTextField']").send_keys('123456')
+        self.driver.find_element_by_xpath("xpath=//*[@id='nameTextField']").send_keys('Test')
+        self.driver.find_element_by_xpath("xpath=//*[@id='amountTextField']").send_keys('10')
+        self.driver.find_element_by_xpath("xpath=//*[@id='countryTextField']").send_keys('US')
+        self.driver.find_element_by_xpath("xpath=//*[@text='Send Payment']").click()
+        self.driver.find_element_by_xpath("xpath=//*[@text='Yes']").click()
 
     def tearDown(self):
         self.driver.quit()
