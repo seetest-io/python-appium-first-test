@@ -2,9 +2,10 @@ import unittest
 from appium import webdriver
 import os
 
+
 class IosAppTest(unittest.TestCase):
     test_name = "iOS App Test with Python"
-    accessKey = os.environ["ACCESS_KEY"]
+    accessKey = os.environ["SEETEST_IO_ACCESS_KEY"]
     dc = {}
     driver = None
 
