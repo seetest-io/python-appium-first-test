@@ -14,7 +14,7 @@ class AndroidAppTest(unittest.TestCase):
         self.dc['testName'] = self.test_name
         self.dc['accessKey'] = self.accessKey
         self.dc['platformName'] = 'Android'
-        self.dc['app'] = 'cloud:com.experitest.ExperiBank/.LoginActivity'
+        self.dc['app'] = 'http://d242m5chux1g9j.cloudfront.net/eribank.apk'
         self.dc['appPackage'] = 'com.experitest.ExperiBank'
         self.dc['appActivity'] = '.LoginActivity'
         self.driver = webdriver.Remote('https://cloud.experitest.com:443/wd/hub', self.dc)
