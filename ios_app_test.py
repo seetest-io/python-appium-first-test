@@ -13,7 +13,7 @@ class IosAppTest(unittest.TestCase):
     def setUp(self):
         self.dc['testName'] = self.test_name
         self.dc['accessKey'] = self.accessKey
-        self.dc['app'] = 'http://d242m5chux1g9j.cloudfront.net/eribank.ipa'
+        self.dc['app'] = 'http://d242m5chux1g9j.cloudfront.net/EriBank.ipa'
         self.dc['bundleId'] = 'com.experitest.ExperiBank'
         self.dc['platformName'] = 'ios'
         self.driver = webdriver.Remote('https://cloud.experitest.com:443/wd/hub', self.dc)
