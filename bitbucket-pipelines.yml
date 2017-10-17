@@ -7,5 +7,4 @@ pipelines:
           - pip
         script: # Modify the commands below to build your repository.
           - pip install Appium-Python-Client
-          - python -m unittest appium-android.AndroidAppTest
-          - python -m unittest appium-ios.IosAppTest
+          - python -m unittest test_runner.py
