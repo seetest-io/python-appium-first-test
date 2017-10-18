@@ -3,7 +3,7 @@ import os
 from appium import webdriver
 
 
-class TestWebsiteAndroidChrome(unittest.TestCase):
+class TestWebsiteiOSSafari(unittest.TestCase):
     dc = {}
     test_name = 'Test Mobile Website on iOS Safari'
     # if you have configured an access key as environment variable,
