@@ -6,9 +6,10 @@ import os
 
 class AndroidAppTest(unittest.TestCase):
     test_name = "Android App Test with Python"
-    accessKey = os.environ['SEETEST_IO_ACCESS_KEY']
-
     dc = {}
+    # if you have configured an access key as environment variable,
+    # use the line below. Otherwise, specify the key directly.
+    accessKey = os.environ['SEETEST_IO_ACCESS_KEY']
     driver = None
 
     def setUp(self):
