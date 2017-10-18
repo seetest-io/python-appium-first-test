@@ -15,7 +15,7 @@ class TestWebsiteAndroidChrome(unittest.TestCase):
         self.dc['testName'] = self.test_name
         self.dc['accessKey'] = self.accessKey
         self.dc['platformName'] = 'ios'
-        self.dc['browser'] = 'safari'
+        self.dc['browserName'] = 'safari'
         self.driver = webdriver.Remote('https://cloud.experitest.com:443/wd/hub', self.dc)
 
     def testUntitled(self):
