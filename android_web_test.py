@@ -22,10 +22,18 @@ class TestWebsiteAndroidChrome(unittest.TestCase):
     def testUntitled(self):
         self.driver.press_keycode(82)
         self.driver.get('https://google.com')
-        self.driver.find_element_by_xpath("xpath=//*[@name='q']").send_keys('mobile automation testing')
-        self.driver.find_element_by_xpath("xpath=//*[@name='btnG']").click()
+
+        if not self.driver.find_elements_by_xpath("xpath=//*[@name='q']"):
+            self.driver.find_element_by_xpath("xpath=//*[@name='q']").send_keys('mobile automation testing')
+        else:
+            self.driver.find_element_by_xpath("//*[@id='lst-ib']").send_keys('mobile automation testing')
+
+        if not self.driver.find_elements_by_xpath("xpath=//*[@name='btnG']"):
+            self.driver.find_element_by_xpath("xpath=//*[@name='btnG']").click()
+        else:
+            self.driver.find_element_by_xpath("xpath=//*[@text='Google Search']").click()
+
         self.driver.implicitly_wait(5000)
-        self.driver.fin
 
     def tearDown(self):
         self.driver.quit()
