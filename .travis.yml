@@ -1,9 +1,10 @@
 language: python
 python:
-  - "3.6"
-
+- '3.6'
+notifications:
+  slack:
+    secure: dqOOHQLpyWoy3tAtB8pYC4zh2ZAwlmH/tOOnPMdxgnoiyaYp6t6EGcINKke13LsFpIg87YOF4KuGb3HWvo8BSp7ziWX8jDqwfOqOBaLP38roCpej/Qe6Pa7TXGQu+ywEEq/6qSXYqTVQ1dEYeA8i9NDvdiErF4fELra1KlrIVcWpNZCXvY5WGmuFnGltyLsPlvXYSUnz6nc/6WMsKtj9tBEjBgPhM83xQet3SsNMEq7Hfi5nInXOMBDJtkyfc3IVSiTsbLLwX3Y+1RoACCoxD6aj314PUvIiJOPb+1OQocC/0Lzq2YljC+saVaedzpATO64sr1ZhuW/jIwAeozzMbyh05JIpLG41D11MwxJSlMJy3HAASpCyt/RYXpso69kunzA9VnZy2Nivo+3F5Zxqc8whPEJ97NW9ViTJl9zu9rG0tIwf6zLC16V02VIyP9Dp+MvkRn9hLeyEL0GoxoA5xxG6ah90NRA4kGHm8HKplyZY1hCf+YmZv6e/uLqwennxBXDGC4DJDEuJ/pG1WBFrwfq3EIccuCEMtux3rhvDt7buGO57VbrNyKXFPh+kgFUtYaSW6gQcZTMbTL85xQazVswxJbM6Kjoqlc9t+RKsqAZzgmahF41BCu6Yn4QcSid336j6Nw3/8HkJVAmaJ6hnaHgBYjAZTsIPxabjNFXuJUs=
 install:
-  - pip install Appium-Python-Client
-
+- pip install Appium-Python-Client
 script:
-  - python -m unittest test_runner.py
+- python -m unittest test_runner.py
