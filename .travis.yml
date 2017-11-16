@@ -2,7 +2,7 @@ language: python
 python:
   - "3.6"
 
-if: [[ ! -z ${SLACK_CHANNEL} ]]
+if: [[ ! -z '${SLACK_CHANNEL}' ]]
 notifications:
   slack: ${SLACK_CHANNEL}
 
