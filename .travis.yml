@@ -3,8 +3,8 @@ python:
   - "3.6"
 
 if: ${SLACK_CHANNEL != null}
-  notifications:
-    slack: ${SLACK_CHANNEL}
+notifications:
+slack: ${SLACK_CHANNEL}
 
 install:
   - pip install Appium-Python-Client
