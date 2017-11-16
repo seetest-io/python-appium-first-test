@@ -2,11 +2,11 @@ language: python
 python:
   - "3.6"
 
+notifications:
+  slack: seetest-io:v2XKrsjZlTEH2JEKltAKrdOG
+
 install:
   - pip install Appium-Python-Client
 
 script:
   - python -m unittest test_runner.py
-
-notifications:
-  slack: ${SLACK_CHANNEL}
