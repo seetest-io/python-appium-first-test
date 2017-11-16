@@ -1,11 +1,9 @@
 language: python
 python:
   - "3.6"
-- if [[ ! -z ${SLACK_CHANNEL} ]] ;
-  then
-    notifications:
-      slack: ${SLACK_CHANNEL};
-  fi
+
+notifications:
+  slack: ${SLACK_CHANNEL}
 
 install:
   - pip install Appium-Python-Client
