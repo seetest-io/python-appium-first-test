@@ -18,6 +18,7 @@ def parallel_execution(self, *tests):
             test_name = str(list_of_suites[test])
             executor.submit(unittest.TextTestRunner().run, list_of_suites[test])
 
+
 parallel_execution(0,
                    ios_app_test.IosAppTest,
                    android_app_test.AndroidAppTest,

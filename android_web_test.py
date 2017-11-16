@@ -6,9 +6,10 @@ from appium import webdriver
 class TestWebsiteAndroidChrome(unittest.TestCase):
     dc = {}
     test_name = 'Test Mobile Website on Android Chrome'
-    #if you have configured an access key as environment variable,
-    #use the line below. Otherwise, specify the key directly.
+    # if you have configured an access key as environment variable,
+    # use the line below. Otherwise, specify the key directly.
     accessKey = os.environ['SEETEST_IO_ACCESS_KEY']
+
     driver = None
 
     def setUp(self):
@@ -24,6 +25,7 @@ class TestWebsiteAndroidChrome(unittest.TestCase):
         self.driver.find_element_by_xpath("xpath=//*[@name='q']").send_keys('mobile automation testing')
         self.driver.find_element_by_xpath("xpath=//*[@name='btnG']").click()
         self.driver.implicitly_wait(5000)
+        self.driver.fin
 
     def tearDown(self):
         self.driver.quit()
