@@ -8,6 +8,5 @@ install:
 script:
   - python -m unittest test_runner.py
 
-when: ${SLACK_CHANNEL} != 'null'
-  notifications:
-    slack: ${SLACK_CHANNEL}
+notifications:
+  slack: ${SLACK_CHANNEL}
