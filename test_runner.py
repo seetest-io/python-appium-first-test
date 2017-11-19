@@ -32,6 +32,10 @@ for res in results:
     if str(res.result()).find("errors=0") == -1:
         failed_tests.append(res)
 if len(failed_tests) > 0:
+    print("some tests failed")
     sys.exit(1)
+else:
+    print("all tests passed")
+    sys.exit(0)
 
 
