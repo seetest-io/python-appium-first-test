@@ -9,7 +9,6 @@ class IosAppTest(unittest.TestCase):
     # if you have configured an access key as environment variable,
     # use the line below. Otherwise, specify the key directly.
     accessKey = os.environ['SEETEST_IO_ACCESS_KEY']
-
     driver = None
 
     def setUp(self):
