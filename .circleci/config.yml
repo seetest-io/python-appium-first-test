@@ -44,7 +44,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            python -m unittest test_runner.py
+            python -m unittest ios_web_test & python -m unittest ios_app_test & python -m unittest android_web_test & python -m unittest android_app_test
 
       - store_artifacts:
           path: test-reports
