@@ -20,13 +20,18 @@ def parallel_execution(self, *tests):
         list_of_suites = list(suite)
         for test in range(len(list_of_suites)):
             list_of_suite_results.append(executor.submit(unittest.TextTestRunner().run, list_of_suites[test]))
+
     return list_of_suite_results
 
 
-parallel_execution(0, ios_app_test.IosAppTest, ios_web_test.TestWebsiteiOSSafari, android_app_test.AndroidAppTest,
+results=parallel_execution(0, ios_app_test.IosAppTest, ios_web_test.TestWebsiteiOSSafari, android_app_test.AndroidAppTest,
                          android_web_test.TestWebsiteAndroidChrome)
 
 
-
+for res in results:
+    if str(res.result()).find("errors=0") == -1:
+        failed_tests.append(res)
+if len(failed_tests) > 0:
+    sys.exit(1)
 
 
