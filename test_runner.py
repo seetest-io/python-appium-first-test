@@ -19,10 +19,7 @@ def parallel_execution(self, *tests):
             return executor.submit(unittest.TextTestRunner().run, list_of_suites[test])
 
 
-res = parallel_execution(0, ios_app_test.IosAppTest,
-                            ios_web_test.TestWebsiteiOSSafari,
-                            android_app_test.AndroidAppTest,
-                            android_web_test.TestWebsiteAndroidChrome)
+res = parallel_execution(0, ios_app_test.IosAppTest, ios_web_test.TestWebsiteiOSSafari, android_app_test.AndroidAppTest, android_web_test.TestWebsiteAndroidChrome)
 
 if str(res.result()).find("errors=0") > -1 and str(res.result()).find("failures=0") > -1:
     print("All tests passed!")

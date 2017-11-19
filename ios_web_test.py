@@ -17,7 +17,7 @@ class TestWebsiteiOSSafari(unittest.TestCase):
         self.dc['accessKey'] = self.accessKey
         self.dc['platformName'] = 'ios'
         self.dc['browserName'] = 'safari'
-        self.driver = webdriver.Remote('https://cloud.experitest.com:443/wd/hub', self.dc)
+        self.driver = webdriver.Remote('https://stage.experitest.com:443/wd/hub', self.dc)
 
     def testUntitled(self):
         self.driver.get('https://google.com')
