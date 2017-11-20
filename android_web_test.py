@@ -22,10 +22,10 @@ class TestWebsiteAndroidChrome(unittest.TestCase):
         self.driver.press_keycode(82)
         self.driver.get('https://google.com')
 
-        if not self.driver.find_elements_by_xpath("//*[@name='q']"):
+        if not self.driver.find_elements_by_xpath("//*[@id='lst-ib']"):
             self.driver.find_element_by_xpath("//*[@name='q']").send_keys('mobile automation testing')
         else:
-            self.driver.find_element_by_xpath("//*[@id='lst-ib']").send_keys('mobile automation testing')
+            self.driver.find_element_by_xpath("//*[@name='q']").send_keys('mobile automation testing')
 
         if not self.driver.find_elements_by_xpath("//*[@name='btnG']"):
             self.driver.find_element_by_xpath("//*[@name='btnG']").click()
