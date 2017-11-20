@@ -22,15 +22,15 @@ class TestWebsiteAndroidChrome(unittest.TestCase):
         self.driver.press_keycode(82)
         self.driver.get('https://google.com')
 
-        if not self.driver.find_elements_by_xpath("xpath=//*[@name='q']"):
-            self.driver.find_element_by_xpath("xpath=//*[@name='q']").send_keys('mobile automation testing')
+        if not self.driver.find_elements_by_xpath("//*[@name='q']"):
+            self.driver.find_element_by_xpath("//*[@name='q']").send_keys('mobile automation testing')
         else:
             self.driver.find_element_by_xpath("//*[@id='lst-ib']").send_keys('mobile automation testing')
 
-        if not self.driver.find_elements_by_xpath("xpath=//*[@name='btnG']"):
-            self.driver.find_element_by_xpath("xpath=//*[@name='btnG']").click()
+        if not self.driver.find_elements_by_xpath("//*[@name='btnG']"):
+            self.driver.find_element_by_xpath("//*[@name='btnG']").click()
         else:
-            self.driver.find_element_by_xpath("xpath=//*[@id='tsbb']").click()
+            self.driver.find_element_by_xpath("//*[@id='tsbb']").click()
 
         self.driver.implicitly_wait(5000)
 
