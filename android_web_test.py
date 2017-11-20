@@ -30,7 +30,7 @@ class TestWebsiteAndroidChrome(unittest.TestCase):
         if not self.driver.find_elements_by_xpath("xpath=//*[@name='btnG']"):
             self.driver.find_element_by_xpath("xpath=//*[@name='btnG']").click()
         else:
-            self.driver.find_element_by_xpath("xpath=//*[@text='Google Search']").click()
+            self.driver.find_element_by_xpath("xpath=//*[@id='tsbb']").click()
 
         self.driver.implicitly_wait(5000)
 
