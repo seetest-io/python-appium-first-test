@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/seetest-io/csharp-appium-first-test.svg?branch=with_slack)](https://travis-ci.org/seetest-io/csharp-appium-first-test)
+
 # This project contains four different tests:
 
 ### 1. Test for Android App
