@@ -9,13 +9,11 @@ class TestWebsiteAndroidChrome(unittest.TestCase):
     # if you have configured an access key as environment variable,
     # use the line below. Otherwise, specify the key directly.
     accessKey = os.environ['SEETEST_IO_ACCESS_KEY']
-    projectName = os.environ['PROJECT_NAME']
     driver = None
 
     def setUp(self):
         self.dc['testName'] = self.test_name
         self.dc['accessKey'] = self.accessKey
-        self.dc['projectName'] = self.projectName
         self.dc['platformName'] = 'android'
         self.dc['browserName'] = 'chrome'
         self.driver = webdriver.Remote('https://stage.experitest.com:443/wd/hub', self.dc)
