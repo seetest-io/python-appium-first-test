@@ -25,7 +25,7 @@ class TestWebsiteAndroidChrome(unittest.TestCase):
 
     def tearDown(self):
         if self.driver is not None:
-            print(self.driver.capabilities["reporterUrl"])
+            print(self.driver.capabilities.get("reporterUrl"))
             self.driver.quit()
 
     if __name__ == '__main__':
