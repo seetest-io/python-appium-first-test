@@ -32,7 +32,9 @@ class IosAppTest(unittest.TestCase):
         self.driver.find_element_by_xpath("xpath=//*[@text='Yes']").click()
 
     def tearDown(self):
-        self.driver.quit()
+        if self.driver is not None:
+            print(self.driver.capabilities["reporterUrl"])
+            self.driver.quit()
 
     if __name__ == '__main__':
         unittest.main()
