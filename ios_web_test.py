@@ -19,13 +19,14 @@ class TestWebsiteiOSSafari(unittest.TestCase):
         self.driver = webdriver.Remote('https://stage.experitest.com:443/wd/hub', self.dc)
 
     def testUntitled(self):
+        print(self.driver.capabilities.get("reporterUrl"))
         self.driver.get('https://google.com')
         self.driver.find_element_by_xpath("//*[@name='q']").send_keys('mobile automation testing')
         self.driver.find_element_by_xpath("//*[@name='btnG']").click()
 
     def tearDown(self):
         if self.driver is not None:
-            print(self.driver.capabilities.get("reporterUrl"))
+            print(self.driver.capabilities.get("reportUrl"))
             self.driver.quit()
 
     if __name__ == '__main__':

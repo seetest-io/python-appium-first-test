@@ -35,7 +35,7 @@ class AndroidAppTest(unittest.TestCase):
 
     def tearDown(self):
         if self.driver is not None:
-            print(self.driver.capabilities.get("reporterUrl"))
+            print(self.driver.capabilities.get("reportUrl"))
             self.driver.quit()
 
     if __name__ == '__main__':
