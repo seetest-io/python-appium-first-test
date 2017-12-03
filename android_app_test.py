@@ -21,7 +21,6 @@ class AndroidAppTest(unittest.TestCase):
         self.driver = webdriver.Remote('https://beta.seetest.io:443/wd/hub', self.dc)
 
     def testYourAndroidApp(self):
-        self.driver.press_keycode(82)
         self.driver.find_element_by_xpath("xpath=//*[@id='usernameTextField']").send_keys('company')
         self.driver.find_element_by_xpath("xpath=//*[@id='passwordTextField']").send_keys('company')
         self.driver.find_element_by_xpath("xpath=//*[@id='loginButton']").click()
