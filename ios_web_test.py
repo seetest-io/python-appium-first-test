@@ -22,7 +22,7 @@ class TestWebsiteiOSSafari(unittest.TestCase):
         print(self.driver.capabilities.get("reporterUrl"))
         self.driver.get('https://google.com')
         self.driver.find_element_by_xpath("//*[@name='q']").send_keys('mobile automation testing')
-        self.driver.find_element_by_xpath("//*[@name='btnG']").click()
+        self.driver.find_element_by_xpath("//*[@aria-label='Google Search']").click()
 
     def tearDown(self):
         if self.driver is not None:
