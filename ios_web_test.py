@@ -16,7 +16,7 @@ class TestWebsiteiOSSafari(unittest.TestCase):
         self.dc['accessKey'] = self.accessKey
         self.dc['platformName'] = 'ios'
         self.dc['browserName'] = 'safari'
-        self.driver = webdriver.Remote('https://stage.experitest.com:443/wd/hub', self.dc)
+        self.driver = webdriver.Remote('https://beta.seetest.io:443/wd/hub', self.dc)
 
     def testUntitled(self):
         print(self.driver.capabilities.get("reporterUrl"))
