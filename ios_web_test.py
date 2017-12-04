@@ -22,7 +22,6 @@ class TestWebsiteiOSSafari(unittest.TestCase):
         self.driver.get('https://amazon.com')
         self.driver.find_element_by_xpath("//*[@name='k']").send_keys('iPhone')
         self.driver.find_element_by_xpath("//*[@value='Go']").click()
-        print(self.driver.page_source)
 
     def tearDown(self):
         if self.driver is not None:
