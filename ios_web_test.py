@@ -20,8 +20,12 @@ class TestWebsiteiOSSafari(unittest.TestCase):
 
     def testUntitled(self):
         self.driver.get('https://amazon.com')
-        self.driver.find_element_by_xpath("//*[@name='k']").send_keys('iPhone')
-        self.driver.find_element_by_xpath("//*[@value='Go']").click()
+        if self.driver.capabilities['device.category'] == 'TABLET':
+            self.driver.find_element_by_xpath("//*[@name='field-keywords']").send_keys('iPhone')
+            self.driver.find_element_by_xpath("//*[@text='Go']").click()
+        else:
+            self.driver.find_element_by_xpath("//*[@name='k']").send_keys('iPhone')
+            self.driver.find_element_by_xpath("//*[@value='Go']").click()
 
     def tearDown(self):
         if self.driver is not None:
