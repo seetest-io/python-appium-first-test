@@ -19,10 +19,10 @@ class TestWebsiteAndroidChrome(unittest.TestCase):
         self.driver = webdriver.Remote('https://beta.seetest.io:443/wd/hub', self.dc)
 
     def testUntitled(self):
-        self.driver.get('https://google.com')
-        self.driver.find_element_by_xpath("//*[@name='q']").send_keys('mobile automation testing')
-        self.driver.find_element_by_xpath("//*[@aria-label='Google Search']").click()
-
+        self.driver.get('https://amazon.com')
+        self.driver.find_element_by_xpath("//*[@name='k']").send_keys('iPhone')
+        self.driver.find_element_by_xpath("//*[@value='Go']").click()
+        print(self.driver.page_source)
 
     def tearDown(self):
         if self.driver is not None:
