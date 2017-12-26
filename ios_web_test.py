@@ -16,6 +16,7 @@ class TestWebsiteiOSSafari(unittest.TestCase):
         self.dc['accessKey'] = self.accessKey
         self.dc['platformName'] = 'ios'
         self.dc['browserName'] = 'safari'
+        self.dc['autoDismissAlerts'] = True
         self.driver = webdriver.Remote('https://beta.seetest.io:443/wd/hub', self.dc)
 
     def testUntitled(self):

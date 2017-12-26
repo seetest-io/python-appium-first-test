@@ -17,6 +17,7 @@ class IosAppTest(unittest.TestCase):
         self.dc['app'] = 'http://d242m5chux1g9j.cloudfront.net/EriBank.ipa'
         self.dc['bundleId'] = 'com.experitest.ExperiBank'
         self.dc['platformName'] = 'ios'
+        self.dc['autoDismissAlerts'] = True
         self.driver = webdriver.Remote('https://beta.seetest.io:443/wd/hub', self.dc)
 
     def testUntitled(self):
