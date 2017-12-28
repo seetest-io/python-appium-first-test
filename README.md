@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/seetest-io/python-appium-first-test.svg?branch=master)](https://travis-ci.org/seetest-io/python-appium-first-test)
+[![Build Status](https://travis-ci.org/seetest-io/ruby-appium-first-test.svg?branch=with_slack)](https://travis-ci.org/seetest-io/ruby-appium-first-test)
 
 # This project contains four different tests:
 
