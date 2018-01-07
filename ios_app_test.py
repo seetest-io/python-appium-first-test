@@ -18,7 +18,7 @@ class IosAppTest(unittest.TestCase):
         self.dc['bundleId'] = 'com.experitest.ExperiBank'
         self.dc['platformName'] = 'ios'
         self.dc['autoDismissAlerts'] = True
-        self.driver = webdriver.Remote('https://beta.seetest.io:443/wd/hub', self.dc)
+        self.driver = webdriver.Remote('https://cloud.seetest.io:443/wd/hub', self.dc)
 
     def testUntitled(self):
         self.driver.find_element_by_xpath("xpath=//*[@text='Username']").send_keys('company')

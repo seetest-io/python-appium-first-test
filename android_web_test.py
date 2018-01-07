@@ -16,7 +16,7 @@ class TestWebsiteAndroidChrome(unittest.TestCase):
         self.dc['accessKey'] = self.accessKey
         self.dc['platformName'] = 'android'
         self.dc['browserName'] = 'chrome'
-        self.driver = webdriver.Remote('https://beta.seetest.io:443/wd/hub', self.dc)
+        self.driver = webdriver.Remote('https://cloud.seetest.io:443/wd/hub', self.dc)
 
     def testUntitled(self):
         self.driver.get('https://amazon.com')
