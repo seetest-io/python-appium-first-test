@@ -18,7 +18,7 @@ class AndroidAppTest(unittest.TestCase):
         self.dc['app'] = 'http://d242m5chux1g9j.cloudfront.net/eribank.apk'
         self.dc['appPackage'] = 'com.experitest.ExperiBank'
         self.dc['appActivity'] = '.LoginActivity'
-        self.driver = webdriver.Remote('https://beta.seetest.io:443/wd/hub', self.dc)
+        self.driver = webdriver.Remote('https://cloud.seetest.io:443/wd/hub', self.dc)
 
     def testYourAndroidApp(self):
         self.driver.find_element_by_xpath("xpath=//*[@id='usernameTextField']").send_keys('company')

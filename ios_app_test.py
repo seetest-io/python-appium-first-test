@@ -8,17 +8,19 @@ class IosAppTest(unittest.TestCase):
     dc = {}
     # if you have configured an access key as environment variable,
     # use the line below. Otherwise, specify the key directly.
+    # accessKey = os.environ['SEETEST_IO_ACCESS_KEY']
     accessKey = os.environ['SEETEST_IO_ACCESS_KEY']
     driver = None
 
     def setUp(self):
         self.dc['testName'] = self.test_name
         self.dc['accessKey'] = self.accessKey
+        self.dc['udid'] = 'df58cd3f2ef8c82a30c6e146c20d665bc7f07d10'
         self.dc['app'] = 'http://d242m5chux1g9j.cloudfront.net/EriBank.ipa'
         self.dc['bundleId'] = 'com.experitest.ExperiBank'
         self.dc['platformName'] = 'ios'
         self.dc['autoDismissAlerts'] = True
-        self.driver = webdriver.Remote('https://beta.seetest.io:443/wd/hub', self.dc)
+        self.driver = webdriver.Remote('https://cloud.seetest.io:443/wd/hub', self.dc)
 
     def testUntitled(self):
         self.driver.find_element_by_xpath("xpath=//*[@text='Username']").send_keys('company')
